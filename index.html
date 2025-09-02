@@ -1,11 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>ЛР №1 Мандронов</title>
-</head>
-<body>
-    Hello World!
-</body>
+  </head>
+  <body>
+    <div class="clocks-container">
+      <img class="clocks-image" src="assets/clocks.png" alt="clocks" />
+    </div>
+    <header>
+      <h1>Расписание занятий</h1>
+      <p>11-е классы - 2023/2024 учебный год</p>
+    </header>
+
+    <div class="class-selector">
+      <button class="class-btn active" onclick="showSchedule('class11a')">
+        11А класс
+      </button>
+      <button class="class-btn" onclick="showSchedule('class11b')">
+        11Б класс
+      </button>
+      <button class="class-btn" onclick="showSchedule('class11c')">
+        11В класс
+      </button>
+    </div>
+
+    <div class="schedule-container">
+      <!-- Расписание для 11А -->
+      <div id="class11a" class="class-schedule active">
+        <table>
+          <thead>
+            <tr>
+              <th class="lesson-number">№</th>
+              <th class="day-header">Понедельник</th>
+              <th class="day-header">Вторник</th>
+              <th class="day-header">Среда</th>
+              <th class="day-header">Четверг</th>
+              <th class="day-header">Пятница</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="lesson-number">1</td>
+              <td>Математика</td>
+              <td>Русский язык</td>
+              <td>Физика</td>
+              <td>Химия</td>
+              <td>Литература</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">2</td>
+              <td>Физика</td>
+              <td>Математика</td>
+              <td>Русский язык</td>
+              <td>Биология</td>
+              <td>История</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">3</td>
+              <td>Английский язык</td>
+              <td>Информатика</td>
+              <td>Математика</td>
+              <td>Физика</td>
+              <td>Обществознание</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">4</td>
+              <td>Литература</td>
+              <td>Физкультура</td>
+              <td>Химия</td>
+              <td>Английский язык</td>
+              <td>Математика</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">5</td>
+              <td>История</td>
+              <td>Обществознание</td>
+              <td>Физкультура</td>
+              <td>Русский язык</td>
+              <td>Информатика</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">6</td>
+              <td>Классный час</td>
+              <td>Элективный курс</td>
+              <td>ОБЖ</td>
+              <td>География</td>
+              <td>Элективный курс</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Расписание для 11Б -->
+      <div id="class11b" class="class-schedule">
+        <table>
+          <thead>
+            <tr>
+              <th class="lesson-number">№</th>
+              <th class="day-header">Понедельник</th>
+              <th class="day-header">Вторник</th>
+              <th class="day-header">Среда</th>
+              <th class="day-header">Четверг</th>
+              <th class="day-header">Пятница</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="lesson-number">1</td>
+              <td>Русский язык</td>
+              <td>Математика</td>
+              <td>Литература</td>
+              <td>Физика</td>
+              <td>Химия</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">2</td>
+              <td>Математика</td>
+              <td>Физика</td>
+              <td>История</td>
+              <td>Русский язык</td>
+              <td>Биология</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">3</td>
+              <td>Информатика</td>
+              <td>Английский язык</td>
+              <td>Математика</td>
+              <td>Обществознание</td>
+              <td>Физика</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">4</td>
+              <td>Физкультура</td>
+              <td>Литература</td>
+              <td>Английский язык</td>
+              <td>Математика</td>
+              <td>Химия</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">5</td>
+              <td>Обществознание</td>
+              <td>История</td>
+              <td>Физкультура</td>
+              <td>Информатика</td>
+              <td>Русский язык</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">6</td>
+              <td>Элективный курс</td>
+              <td>Классный час</td>
+              <td>География</td>
+              <td>ОБЖ</td>
+              <td>Элективный курс</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Расписание для 11В -->
+      <div id="class11c" class="class-schedule">
+        <table>
+          <thead>
+            <tr>
+              <th class="lesson-number">№</th>
+              <th class="day-header">Понедельник</th>
+              <th class="day-header">Вторник</th>
+              <th class="day-header">Среда</th>
+              <th class="day-header">Четверг</th>
+              <th class="day-header">Пятница</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="lesson-number">1</td>
+              <td>Физика</td>
+              <td>Химия</td>
+              <td>Математика</td>
+              <td>Русский язык</td>
+              <td>Биология</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">2</td>
+              <td>Математика</td>
+              <td>Русский язык</td>
+              <td>Физика</td>
+              <td>Литература</td>
+              <td>История</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">3</td>
+              <td>Химия</td>
+              <td>Математика</td>
+              <td>Английский язык</td>
+              <td>Физика</td>
+              <td>Обществознание</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">4</td>
+              <td>Английский язык</td>
+              <td>Физкультура</td>
+              <td>Информатика</td>
+              <td>Математика</td>
+              <td>Русский язык</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">5</td>
+              <td>История</td>
+              <td>Обществознание</td>
+              <td>Физкультура</td>
+              <td>Информатика</td>
+              <td>Литература</td>
+            </tr>
+            <tr>
+              <td class="lesson-number">6</td>
+              <td>ОБЖ</td>
+              <td>Элективный курс</td>
+              <td>Классный час</td>
+              <td>География</td>
+              <td>Элективный курс</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </body>
+  <script src="js/index.js"></script>
 </html>

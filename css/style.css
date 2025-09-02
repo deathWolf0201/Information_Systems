@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clocks-container {
+  padding: 40px;
+  text-align: center;
+  align-items: center;
+}
+.clocks-image {
+  width: 240px;
+  height: 200px;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.class-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 15px;
+}
+
+.class-btn {
+  padding: 12px 25px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.class-btn:hover {
+  background: #2980b9;
+  transform: translateY(-3px);
+}
+
+.class-btn.active {
+  background: #e74c3c;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-container {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #2c3e50;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f8ff;
+}
+
+.lesson-number {
+  background: #34495e;
+  color: white;
+  font-weight: bold;
+  width: 60px;
+}
+
+.day-header {
+  background: #34495e;
+  color: white;
+  font-weight: bold;
+}
+
+.class-schedule {
+  display: none;
+}
+
+.class-schedule.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .class-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .class-btn {
+    width: 80%;
+  }
+
+  th,
+  td {
+    padding: 10px 5px;
+    font-size: 0.9rem;
+  }
+}
